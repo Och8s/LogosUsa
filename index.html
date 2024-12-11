@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('fondo.jpg');
+            flex-direction: column;
+        }
+        
+        .logo-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em; /* Se ajusta el espacio entre los logos */
+            justify-content: center;
+        }
+        .logo-container img {
+            width: 6.25em; /* 100px en em */
+            height: auto;
+            border: 0.0625em solid #ddd; /* 1px en em */
+            border-radius: 0.5em; /* 8px en em */
+            box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1); /* 2px en em */
+            transition: transform 0.3s ease;
+        }
+        .logo-container img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Animación Olimpiada */
+        .olimpiada {
+            width: 6.25em; /* 100px en em */
+            height: 6.25em; /* 100px en em */
+            animation: example3 6s infinite;
+            animation-delay: 3s;
+        }
+
+        .apple {
+            width: 6.25em; /* 100px en em */
+            height: 6.25em; /* 100px en em */
+            position: relative;
+            background-color: red;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-direction: reverse;
+        }
+
+        @keyframes example2 {
+            0% {background-color:rgb(103, 81, 81); left:0em; top:0em;}
+            10% {background-color:rgb(99, 99, 74); top:15em; left:0em;}
+            30% {background-color:rgb(115, 115, 141); left:31.25em; top:15em;}
+            40% {background-color:rgb(77, 97, 77); left:31.25em; top:-15em;}
+            60% {background-color:rgb(77, 97, 77); left:-25em; top:-15em;}
+            75% {background-color:rgb(99, 78, 78); left:-25em; top:15em;}
+            85% {background-color:rgb(99, 78, 78); left:0em; top:15em;}
+            100% {background-color:rgb(61, 63, 77); left:0em; top:0em;}
+        }
+
+        .cotxe {
+            width: 6.25em; /* 100px en em */
+            height: 6.25em; /* 100px en em */
+            position: relative;
+            background-color: red;
+            animation-name: example2;
+            animation-duration: 10s;
+        }
+
+        /* Animación para el logo de Superman */
+        .super {
+            width: 6.25em; /* 100px en em */
+            height: 6.25em; /* 100px en em */
+            animation-name: example;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        .nike {
+            width: 31.25em; /* 500px en em */
+            height: 3.125em; /* 50px en em */
+            animation-name: example4;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes example {
+            from {
+                background-color: rgb(30, 185, 241);
+                transform: scaleX(1); 
+            }
+            50% {
+                background-color: rgb(14, 14, 13);
+                transform: scaleX(-1);
+            }
+            to {
+                background-color: rgb(30, 185, 241);
+                transform: scaleX(1); 
+            }
+        }
+
+        @keyframes example3 {
+            0% {
+                transform: rotate(0deg);
+                background-color: black;
+            }
+            100% {
+                transform: rotate(360deg);
+                background-color: rgb(245, 243, 243);
+            }
+        }
+
+        @keyframes example4 {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(2);
+            }
+        }
+
+        /* Animación de transparencia para el SVG */
+        .cono {
+            animation: example5 3s infinite alternate;
+        }
+
+        @keyframes example5 {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+       
+        /* Contenedor para alinear los SVGs en línea */
+        .inline-container {
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+            display: flex;
+            align-items: baseline;
+            gap: 1.25em; /* 15px en em */
+            padding: 0.625em; /* 10px en em */
+            z-index: 10;
+        }
+        .inline-container svg {
+            width: 5em; /* 80px en em */
+            height: 5em; /* 80px en em */
+        }
+
+         .corazon-image {
+            animation: example6 1.5s infinite;
+        }
+
+        /* Animación para el latido del corazón */
+        @keyframes example6 {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25em; /* 20px en em */
+            margin-top: 1.875em; /* 30px en em */
+        }
+
+        .star-container {
+            position: absolute;
+            bottom: 1.25em; /* 20px en em */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            gap: 1.25em; /* 20px en em */
+            z-index: 9999;
+        }
+
+        .starBlue {
+            width: 3.125em; /* 50px en em */
+            height: 3.125em; /* 50px en em */
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            background-color: rgb(6, 90, 193);
+            animation: example7 2s infinite alternate;
+        }
+        .starRed {
+            width: 3.125em; /* 50px en em */
+            height: 3.125em; /* 50px en em */
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            background-color: rgb(255, 17, 0);
+            animation: example8 2s infinite alternate;
+        }
+
+        @keyframes example7 {
+            0% {
+                background-color: rgb(255, 17, 0);
+            }
+            50% {
+                background-color: rgb(6, 90, 193);
+            }
+            100% {
+                background-color: rgb(255, 17, 0);
+            }
+        }
+
+        @keyframes example8 {
+            0% {
+                background-color: rgb(6, 90, 193);
+            }
+            50% {
+                background-color: rgb(255, 17, 0);
+            }
+            100% {
+                background-color: rgb(6, 90, 193);
+            }
+        }
+
+        /* Logo propio */
+        .logo-Propio {
+            position: absolute;
+            top: 1.25em; 
+            left: 1.25em; 
+            width: 5em; 
+            height: auto;
+            animation: example9 10s;
+        }
+
+        h1{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 4.0625em; /* 65px en em */
+        }
+
+       /* Animación como si explotase */
+       @keyframes example9 {
+            0% {
+                opacity: 1;
+                transform: scale(0.5);
+            }
+            20% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+            40% {
+                opacity: 1;
+                transform: scale(0.5);
+            }
+            60% {
+                opacity: 0;
+                transform: scale(1.2);
+            }80% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            
+        }
+    
+    </style>
+</head>
+<body> 
+
+    <!-- Logo creado inskcape-->
+    <img src="logoPropio.svg" alt="Logo Propio" class="logo-Propio" width="50%" height="50%">
+
+    <div class="inline-container">
+        <h1>I</h1>    
+        <img src="corazon.webp" alt="Corazon" class="corazon-image" width="80" height="80">
+        <h1>America</h1>
+    </div>
+    <!-- Imagen creada -->
+    <svg class="cono" xmlns="http://www.w3.org/2000/svg" width="126" height="320" viewBox="0 -120 100 300" style="position: absolute; top: 112px; left: 50.7%;">
+        <polygon points="110,-165 94,68 -3,66" fill="black" />
+        <ellipse cx="45" cy="74" rx="50" ry="30" fill="black" />
+    </svg>
+    <!-- Imagen actividad anterior -->
+    <div class="logo-container">
+        <img src="apple.svg" alt="Logo 1" class="apple">
+        <img src="halterofilia.svg" alt="Logo 2" class="olimpiada">
+        <img src="logo.svg" alt="Logo 3" class="cotxe">
+        <img src="batman.svg" alt="Logo 4">
+        <img src="superman.svg" alt="Logo 5" class="super">
+        <img src="nike.svg" alt="Logo 6" class="nike">
+    </div>
+
+    <!-- Tres estrellas centradas en la parte inferior -->
+    <div class="star-container">
+        <div class="starBlue"></div>
+        <div class="starRed"></div>
+        <div class="starBlue"></div>
+        <div class="starRed"></div>
+        <div class="starBlue"></div>
+
+    </div>
+  
+
+</body>
+</html>
+
+
